@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart & Checkout - Bilezik Bagh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Bilezik Bagh Logo" class="logo" />
+    <div class="top-bar">
+      <input type="text" id="searchBar" placeholder="Search products...">
+      <a href="cart-checkout.html" class="cart-icon">🛒<span id="cartCount">0</span></a>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="bracelets.html">Bracelets</a>
+      <a href="rings.html">Rings</a>
+      <a href="charms.html">Charms</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="admin.html">📷 Instagram</a>
+    </nav>
+  </aside>
+
+  <main class="checkout">
+    <h1>Your Cart</h1>
+    <div id="cartItems"></div>
+
+    <div class="checkout-form">
+      <h2>Checkout</h2>
+      <form action="https://formspree.io/f/mkgrdddp" method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" required />
+
+        <label>Email:</label>
+        <input type="email" name="email" required />
+
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" required />
+
+        <label>Address:</label>
+        <textarea name="address" required></textarea>
+
+        <label>Payment Method:</label>
+        <select name="payment" id="paymentMethod" onchange="togglePaymentDetails()">
+          <option value="cod">Cash on Delivery (+Rs. 50)</option>
+          <option value="jazzcash">JazzCash</option>
+          <option value="easypaisa">Easypaisa</option>
+        </select>
+
+        <div id="manualPayment" class="hidden">
+          <p>Send payment to: <strong>03361041316</strong></p>
+          <label>Upload Payment Screenshot:</label>
+          <input type="file" name="screenshot" required />
+        </div>
+
+        <input type="hidden" name="order-summary" id="orderSummaryField" />
+        <button type="submit" onclick="attachOrderSummary()">Place Order</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bilezik Bagh. All rights reserved.</p>
+  </footer>
+</body>
+</html>

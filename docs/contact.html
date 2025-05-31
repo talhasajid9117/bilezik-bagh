@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <img src="images/logo.png" alt="Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bracelets.html">Bracelets</a></li>
+        <li><a href="rings.html">Rings</a></li>
+        <li><a href="charms.html">Charms</a></li>
+        <li><a href="cart-checkout.html">🛒 <span id="cart-count">0</span></a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <main class="contact-container">
+    <h1>Contact Us</h1>
+    <p>If you have any questions, special requests, or just want to say hi — fill the form below and we’ll get back to you soon!</p>
+
+    <form action="https://formspree.io/f/mkgrdddp" method="POST" class="contact-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="confirmation-message" id="confirmationMessage">
+      <p>Thank you! Your message has been sent. 💖</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bilezik Bagh</p>
+    <a href="https://www.instagram.com/bilezik.bagh_?igsh=MWJxc2xkOWgwOWFjeg==" target="_blank">
+      <img src="images/insta.png" alt="Instagram" class="insta-icon" />
+    </a>
+  </footer>
+
+</body>
+</html>

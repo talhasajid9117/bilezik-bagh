@@ -1,0 +1,52 @@
+<!-- bracelets.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bracelets - Bilezik Bagh</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Bilezik Bagh Logo" class="logo" />
+    <nav>
+      <ul class="sidebar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bracelets.html">Bracelets</a></li>
+        <li><a href="rings.html">Rings</a></li>
+        <li><a href="charms.html">Charms</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="cart-checkout.html">🛒 <span id="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Bracelets</h1>
+    <section class="product-grid">
+      <!-- Repeat this block for 18 bracelets -->
+      <!-- Example -->
+      <script>
+        const braceletContainer = document.currentScript.parentElement;
+        for (let i = 1; i <= 18; i++) {
+          braceletContainer.innerHTML += `
+          <div class="product">
+            <img src="images/bracelet${i}.jpg" alt="Bracelet ${i}" />
+            <h3>Custom Bracelet ${i}</h3>
+            <p>Price: Rs. 250</p>
+            <input type="number" value="1" min="1" max="3" class="quantity" />
+            <button onclick="addToCart('Bracelet ${i}', 250, 'images/bracelet${i}.jpg', this)">Add to Cart</button>
+          </div>`;
+        }
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bilezik Bagh | Follow us on <a href="https://www.instagram.com/bilezik.bagh_" target="_blank">Instagram</a></p>
+  </footer>
+</body>
+</html>

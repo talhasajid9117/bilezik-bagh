@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rings - Bilezik Bagh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <input type="text" id="searchBar" placeholder="Search products..." onkeyup="searchProducts()">
+      <div class="admin-insta">
+        <a href="admin.html" class="admin-link">Admin</a>
+        <a href="https://www.instagram.com/bilezik.bagh_?igsh=MWJxc2xkOWgwOWFjeg==" target="_blank">
+          <img src="images/instagram.png" alt="Instagram" class="insta-icon">
+        </a>
+        <a href="cart-checkout.html" class="cart-icon">🛒<span id="cartCount">0</span></a>
+      </div>
+    </div>
+    <img src="images/logo.png" alt="Bilezik Bagh Logo" class="logo">
+  </header>
+
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bracelets.html">Bracelets</a></li>
+        <li><a href="rings.html" class="active">Rings</a></li>
+        <li><a href="charms.html">Charms</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <h1>Rings Collection</h1>
+    <p class="page-description">Explore our beautiful customizable ring styles. Watch the video to see the full collection and DM for your own custom design!</p>
+
+    <div class="video-preview">
+      <video controls width="100%">
+        <source src="video/rings.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="product-placeholder">
+      <h2>Custom Orders Only</h2>
+      <p>Each ring is made based on your unique design. Contact us via Instagram or the contact form to place a request.</p>
+      <p class="price">Starting at PKR 70 each</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bilezik Bagh | Follow us on <a href="https://www.instagram.com/bilezik.bagh_?igsh=MWJxc2xkOWgwOWFjeg==" target="_blank">Instagram</a></p>
+  </footer>
+</body>
+</html>
